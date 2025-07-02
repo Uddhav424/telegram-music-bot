@@ -1,44 +1,18 @@
-# # main.py
+from pyrogram import Client
 
-from pyrogram import Client, filters
-from config import API_ID, API_HASH, BOT_TOKEN
-import logging
+api_id = 12345678  # Replace with your actual API ID
+api_hash = "a3a7c48e39c5ca814e207829b3159dd"  # Replace with your actual API hash
+bot_token = "8188601797:AAEP-_fHZ0ByC08tIUqVcjmHWkJeVEHDAtY"  # Replace with your actual bot token
 
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
-)
-logger = logging.getLogger(__name__)
-
-# Create the bot client
 app = Client(
-    "telegram_bot",
-    api_id=28864821,
-    api_hash = "a3a7c48e39c5fca814e207829b3159dd"
-    bot_token = "8188601797:AAEP-_fHZ0ByC08tIUqVcjmHWkJeVEHDAtY"
-
+    "my_bot",
+    api_id=api_id,
+    api_hash=api_hash,
+    bot_token=bot_token
 )
 
-# Start message handler
-@app.on_message(filters.command("start") & filters.private)
-async def start_handler(client, message):
-    await message.reply_text(
-        "👋 Hello! I am your Telegram bot.\n\n"
-        "✅ I'm running perfectly.\n"
-        "Type /help to see more commands!"
-    )
+@app.on_message()
+def hello(client, message):
+    message.reply("Hello! Bot is running successfully ✅")
 
-# Help message handler
-@app.on_message(filters.command("help") & filters.private)
-async def help_handler(client, message):
-    await message.reply_text(
-        "ℹ️ **Available Commands:**\n"
-        "/start - Start the bot\n"
-        "/help - Show this help message"
-    )
-
-# Run the bot
-if __name__ == "__main__":
-    print("✅ Bot is starting...")
-    app.run()
+app.run()
