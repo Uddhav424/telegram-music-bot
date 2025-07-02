@@ -16,7 +16,8 @@ app = Client(
     "telegram_bot",
     api_id=28864821,
     api_hash=a3a7c48e39c5fca814e207829b3159dd,
-    bot_token=8186601797:AAEP_-fHZO8yCO8tIUqYcjmHWKJeVEHDAtY
+    bot_token = "8188601797:AAEP-_fHZ0ByC08tIUqVcjmHWkJeVEHDAtY"
+
 )
 
 # Start message handler
