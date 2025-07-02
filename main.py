@@ -15,4 +15,5 @@ app = Client(
 def hello(client, message):
     message.reply("Hello! Bot is running successfully ✅")
 
-app.run()
+from pyrogram.idle import idle
+ app.run()
