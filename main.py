@@ -20,7 +20,7 @@ def song(update, context):
         update.message.reply_text("🚫 Song nahi mila")
 
 def main():
-    TOKEN = "🔒YOUR_BOT_TOKEN_HERE"  # yahan apna BotFather se mila token daalo
+    TOKEN = "8186601797:AAEP_-fHZO8yCO8tIUqYcjmHWKJeVEHDAtY"  # yahan apna BotFather se mila token daalo
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 
