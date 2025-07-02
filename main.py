@@ -1,35 +1,16 @@
-from telegram.ext import Updater, CommandHandler
-import requests
+from pyrogram import Client
+from pytgcalls import PyTgCalls
+from config import API_ID, API_HASH, BOT_TOKEN
+from helper import start_handler
 
-def start(update, context):
-    update.message.reply_text("👋 Hi! Use /song <name> to get music!")
+app = Client("music_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+pytgcalls = PyTgCalls(app)
 
-def song(update, context):
-    query = ' '.join(context.args)
-    if not query:
-        update.message.reply_text("❗ Song name likho: /song kesariya")
-        return
+@app.on_message()
+async def handler(client, message):
+    await start_handler(client, message, pytgcalls)
 
-    res = requests.get(f"https://saavn.me/search/songs?query={query}").json()
-    try:
-        song = res['data']['results'][0]
-        title = song['name']
-        link = song['downloadUrl'][-1]['link']
-        update.message.reply_audio(audio=link, caption=f"🎵 {title}")
-    except:
-        update.message.reply_text("🚫 Song nahi mila")
-
-def main():
-    TOKEN = "8186601797:AAEP_-fHZO8yCO8tIUqYcjmHWKJeVEHDAtY"  # yahan apna BotFather se mila token daalo
-    updater = Updater(TOKEN, use_context=True)
-    dp = updater.dispatcher
-
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("song", song))
-
-    updater.start_polling()
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
-  
+app.start()
+pytgcalls.start()
+print("Bot is running...")
+app.idle()
