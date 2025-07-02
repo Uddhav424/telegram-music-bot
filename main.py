@@ -15,5 +15,5 @@ app = Client(
 def hello(client, message):
     message.reply("Hello! Bot is running successfully ✅")
 
-from pyrogram.idle import idle
- app.run()
+if __name__ == "__main__":
+    app.run()  # ✅ 4 spaces
