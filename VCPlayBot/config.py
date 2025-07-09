@@ -7,15 +7,15 @@ if os.path.exists("local.env"):
     load_dotenv("local.env")
 
 que = {}
-SESSION_NAME = getenv("SESSION_NAME", "session")
-BOT_TOKEN = getenv("BOT_TOKEN")
-BOT_NAME = getenv("BOT_NAME")
+SESSION_NAME = getenv("SESSION_NAME", "1BVtsOHgBu2YnZ7NTf-1L5PXqFzlrVBL_ZebwV2EUPoGw9X36ddkFaOrmjzKI8I0cu4-lRq2VZmVHIieiJ5Ux7o5B9oACE6c3GX2KEz7cP_7WC9IpMF4jxBfw5aNjPRp1BwnM3UeF3cs2THwmB2N67b2w8iOeQpluqru59KOJk60n1rylSVWL4_siEfJZQ4EfszrnaPRYH8LrcONkOt19R37WNoRi2Fs5yJbFDMFWj-TUrl1uA1TJHZcbFdHNwXYgCHhn0oyiUF33dOvtNMK_hSvkchKYw72jCQd3-tdrn4hjMmypigv-BaWG36WCoWIDw_ku8BQ7hIUJPpUO_QgCY8HqSjiLMlo=")
+BOT_TOKEN = getenv("8185897011:AAEs215vfIWCekUYcfU4Td79_p0l2GyYEbk")
+BOT_NAME = getenv("Shruti x music")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "LaylaBots")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/9b13ea3ce046a1a5c8098.png")
 admins = {}
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
-BOT_USERNAME = getenv("BOT_USERNAME")
+API_ID = int(getenv("20005361"))
+API_HASH = getenv("14553838a536c00979e3f671dd95b047")
+BOT_USERNAME = getenv("@Shruti_x_music_bot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "Dead0XD")
 OWNER_NAME = getenv("OWNER_NAME", "HEROGAMERS1")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "AwesomeSupport")
