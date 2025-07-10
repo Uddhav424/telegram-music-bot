@@ -1,5 +1,5 @@
 pyrogram==2.0.106
-pytgcalls==1.2.4
+pytgcalls==1.0.0.dev4
 tgcrypto==1.2.5
 pydub==0.25.1
 aiohttp==3.8.5
