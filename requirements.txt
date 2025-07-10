@@ -1,7 +1,5 @@
-pyrogram
-tgcrypto
-pytgcalls[pyrogram]
-python-dotenv
+pytgcalls[pyrogram]==0.5.2
+tgcalls==0.2.0
 youtube_dl
 youtube_search_python
 requests
