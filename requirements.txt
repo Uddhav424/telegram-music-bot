@@ -4,5 +4,6 @@ pydub==0.25.1
 aiohttp==3.9.3
 aiofiles==23.1.0
 ffmpeg-python==0.2.0
+requests
 
 git+https://github.com/pytgcalls/pytgcalls.git@dev
