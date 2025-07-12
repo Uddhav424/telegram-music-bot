@@ -1,9 +1,10 @@
-pyrogram==2.0.106
-tgcrypto==1.2.5
-pydub==0.25.1
-aiohttp==3.9.3
-aiofiles==23.1.0
-ffmpeg-python==0.2.0
+pyrogram
+tgcrypto
+aiohttp
+aiofiles
 requests
+pytgcalls
+ffmpeg-python
+python-dotenv
 
 git+https://github.com/pytgcalls/pytgcalls.git@dev
